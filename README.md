@@ -1,83 +1,55 @@
-Universal IC Tester for Analog and Digital ICs
+# Universal IC Tester for Analog and Digital ICs
 
-This project presents a low-cost, portable IC tester using an Arduino UNO to validate both digital logic ICs and analog ICs.
-The system checks the functionality of common ICs such as logic gates (NAND, NOR, AND, OR, XOR, XNOR) and analog devices like the LM741 Op-Amp, BJT, and JFET, providing quick verification for education, R&D, and troubleshooting.
+This project is a **Universal IC Tester** built using an Arduino Uno, designed to test both **digital ICs** (7400 series logic gates) and **analog ICs** (like LM741 Op-Amp).  
+The tester checks the functionality of the inserted IC and indicates whether it is working correctly. It is useful for **education, R&D, and troubleshooting**.
 
-Project Video
+---
 
-Demonstration: Watch Here (replace with your video link)
+## Features
+- Tests both **digital ICs** (NAND, NOR, AND, OR, EX-OR, EX-NOR) and **analog ICs** (LM741 Op-Amp, BJT, JFET).
+- Identifies whether an IC is working or faulty.
+- Provides **LED indication** for quick status feedback.
+- Displays results on the **Serial Monitor**.
+- Portable, low-cost, and beginner-friendly.
 
-Key Features
+---
 
-Tests both digital ICs (7400, 7402, 7408, 7432, 7486, 747266) and analog ICs (LM741 Op-Amp, BJT, JFET).
+## Components Used
+- Arduino Uno  
+- Breadboard & jumper wires  
+- Resistors  
+- LEDs (Red, Green)  
+- Digital ICs (7400 NAND, 7402 NOR, 7408 AND, 7432 OR, 7486 EX-OR, 747266 EX-NOR)  
+- LM741 Operational Amplifier (Op-Amp)
 
-LED indicators show pass/fail results instantly.
+---
 
-Serial Monitor output provides detailed test results.
+## Working Principle
+- For **digital ICs**: The Arduino provides input combinations, reads the outputs, and compares them against the truth table.  
+- For **analog ICs (Op-Amp)**: The output voltage is measured and validated against expected values.  
+- If the IC works correctly, the LED indicator lights up and results are shown on the Serial Monitor.
 
-Portable, low-cost, and easy to use for students and engineers.
+---
 
-System Overview
+## Implementation
+1. Connect IC inputs and outputs to the Arduino pins as per the schematic.
+2. Upload the Arduino code from this repository.
+3. Insert the IC to be tested.
+4. Observe LED indications and Serial Monitor output for the test result.
 
-Hardware Setup
+---
 
-Arduino UNO as the controller.
+## Applications
+- Educational tool for learning about logic gates and op-amps.
+- IC validation in **R&D labs**.
+- Quick testing and debugging in engineering projects.
 
-LEDs and resistors for visual indication.
+---
 
-Breadboard and jumper wires for quick prototyping.
+## Limitations
+- Currently supports a limited set of ICs (listed above).
+- Can only test **one gate per IC** — assumes if one gate works, the IC works.
 
-IC Testing Method
+---
 
-For digital ICs, Arduino applies all possible input combinations and compares outputs with truth tables.
 
-For analog ICs, Arduino measures Op-Amp output voltages via analog pins and validates threshold values.
-
-Result Indication
-
-Green LED lights up if the IC works correctly.
-
-Serial Monitor displays detailed pass/fail outputs for each test.
-
-Hardware Used
-
-Arduino UNO
-
-Breadboard
-
-Resistors
-
-LEDs (Red, Green)
-
-Jumper wires
-
-Digital ICs (7400 series)
-
-LM741 Operational Amplifier
-
-Software & Tools
-
-Arduino IDE
-
-C/C++ code for IC testing
-
-Serial Monitor for result display
-
-Applications
-
-Educational tool for learning digital and analog circuits
-
-R&D labs for IC validation
-
-Circuit debugging in engineering projects
-
-Limitations
-
-Limited to supported ICs (basic gates and LM741 Op-Amp).
-
-Tests only one gate per IC, assuming others are functional.
-
-Conclusion
-
-The Universal IC Tester provides a simple and efficient solution to test the functionality of both digital and analog ICs.
-Its portability and low cost make it highly suitable for students, researchers, and engineers in academic and practical environments.
